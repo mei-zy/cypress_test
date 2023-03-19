@@ -3,11 +3,19 @@ import { useState } from "react";
 const App = () => {
   const [count, setCount] = useState(0);
 
-  const onPlusBtnClick = () => {};
+  const onPlusBtnClick = () => {
+    if (count >= 10) return;
+    setCount(count + 1);
+  };
 
-  const onMinusBtnClick = () => {};
+  const onMinusBtnClick = () => {
+    if (count <= 0) return;
+    setCount(count - 1);
+  };
 
-  const onResetBtnClick = () => {};
+  const onResetBtnClick = () => {
+    setCount(0);
+  };
 
   return (
     <section style={{ width: "500px", margin: "40px auto" }}>
