@@ -22,14 +22,19 @@ const App = () => {
       <section style={{ display: "flex" }}>
         <button
           onClick={onMinusBtnClick}
+          className="minus"
           style={{ width: "60px", fontSize: "30px" }}
+          data-cy="minus"
         >
           -
         </button>
-        <div style={{ margin: "0px 40px", fontSize: "30px" }}>{count}</div>
+        <div style={{ margin: "0px 40px", fontSize: "30px" }} data-cy="count">
+          {count}
+        </div>
         <button
           onClick={onPlusBtnClick}
           style={{ width: "60px", fontSize: "30px" }}
+          data-cy="plus"
         >
           +
         </button>
